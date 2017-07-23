@@ -1,75 +1,114 @@
 ﻿body {
 	font-family: 'Open Sans', sans-serif;
+	background-color: #fff;
+	text-align: center;
 }
 html {
 	font-size: 10px;
 }
-/* .container { */
-	/* text-align: center; */
-/* } */
 
-/* прелоадер */
-.preloader {
-  height: 100%;
-  width: 100%;
-  background: #fff;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 10000;
-  perspective: 1600px;
-  perspective-origin: 20% 50%;
-  transition: 0.5s all;
-  opacity: 1;
+* {
+ box-sizing: border-box;
 }
-.spinner {
-  width: 80px;
-  height: 80px;
-  border: 2px solid #242424; /*подобрать цвета в куллере*/
-  border-top: 3px solid #FFF;
-  border-radius: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  animation: spin 1s infinite linear;
+ 
+label[for] {
+ cursor: pointer;
 }
-.preloader.fade {
-  opacity: 0;
+ 
+input[type="checkbox"] {
+ display: none;
 }
-.b-ico-preloader {
-  background: url(http://weblaboratory.in.ua/wp-content/themes/graphy/images/new_logo.svg);
-  background-size: cover;
-  width: 52px;
-  height: 67px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  animation: ico 5s infinite linear;
-  transform-style: preserve-3d;
+ 
+body {
+ background-color: #000;
 }
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ 
+.lightbox, .grid {
+ width: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
 }
-@keyframes ico {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
+ 
+.lightbox {
+ z-index: 1;
+ min-height: 100%;
+ overflow: auto;
+ -webkit-transform: scale(0);
+ -ms-transform: scale(0);
+ transform: scale(0);
+ -webkit-transition: -webkit-transform .5s ease-out;
+ transition: transform .5s ease-out;
 }
-/* */
-
-
-
+.lightbox img {
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ max-width: 96%;
+ max-height: 96%;
+ -webkit-transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+ 
+input[type="checkbox"]:checked + .lightbox {
+ -webkit-transform: scale(1);
+ -ms-transform: scale(1);
+ transform: scale(1);
+}
+ 
+input[type="checkbox"]:checked ~ .grid {
+ opacity: .125;
+}
+ 
+.grid {
+ display: -webkit-box;
+ display: -webkit-flex;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-flex-wrap: wrap;
+ -ms-flex-wrap: wrap;
+ flex-wrap: wrap;
+ -webkit-box-align: start;
+ -webkit-align-items: flex-start;
+ -ms-flex-align: start;
+ align-items: flex-start;
+ -webkit-align-content: flex-start;
+ -ms-flex-line-pack: start;
+ align-content: flex-start;
+ z-index: 0;
+ height: 100%;
+ padding: 16px;
+ overflow: auto;
+ background-color: #222;
+ text-align: center;
+ -webkit-transition: opacity .75s;
+ transition: opacity .75s;
+}
+.grid .grid-item {
+ display: inline-block;
+ width: 25%;
+ padding: 16px;
+ opacity: .75;
+ -webkit-transition: opacity .5s;
+ transition: opacity .5s;
+}
+.grid .grid-item:hover {
+ opacity: 1;
+}
+@media screen and (max-width: 1024px) {
+ .grid .grid-item {
+ width: 50%;
+ }
+}
+@media screen and (max-width: 480px) {
+ .grid .grid-item {
+ width: 100%;
+ }
+}
+.grid img {
+ width: 350px;
+ height: 250px;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
