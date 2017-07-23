@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="www.nicholasinfocus.ru">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Николай Романьков - Фотограф. Санкт-Петербург">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="Закажите фотосет от 1000 рублей.">
+    <meta property="og:site_name" content="Портфолио фотографа">
+    <meta property="article:author" content="Николай Романьков">
+    <title>Николай Романьков - Портфолио</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/fontello-embedded.css">
+	<link rel="stylesheet" media="screen,projection" href="css/ui.totop.css" />
+    <link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="icon" href="img/icon.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/jquery.ui.totop.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+	   $(document).ready(function() {
+            $('body').UItoTop({scrollSpeed: 700}); //кнопка 'наверх'
+			// кнопка вниз 
+			$("#as").click(function () {
+                  var elementClick = $(this).attr("href")
+                  var destination = $(elementClick).offset().top;
+                  jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 0}, 800);
+                  return false;
+            });
+			// прелоадер
+            var preload = document.createElement('div');
+            preload.className = "preloader";
+            preload.innerHTML = '<div class="b-ico-preloader"></div><div class="spinner"></div>';
+            document.body.appendChild(preload);
+            window.addEventListener('load', function() {
+                  preload.className +=  ' fade';
+                  setTimeout(function(){
+                          preload.style.display = 'none';
+                  },600);
+            })
+			//анимация
+            var wow = new WOW({
+			  mobile: false
+			});
+            wow.init();
+            //модалка
+			 $('a[name=modal]').click(function(e) {
+                  e.preventDefault();
+                  var id = $(this).attr('href');
+                  var maskHeight = $(document).height();
+                  var maskWidth = $(window).width();
+                  $('#mask').css({'width':maskWidth,'height':maskHeight});
+                  $('#mask').fadeIn(1000); 
+                  $('#mask').fadeTo("slow",0.8); 
+                  var winH = $(window).height();
+                  var winW = $(window).width();
+                  $(id).css('top',  winH/2-$(id).height()/2);
+                  $(id).css('left', winW/2-$(id).width()/2);
+                  $(id).fadeIn(2000); 
+             });
+             $('.window .close').click(function (e) { 
+                  e.preventDefault();
+                  $('#mask, .window').hide();
+             }); 
+             $('#mask').click(function () {
+                  $(this).hide();
+                  $('.window').hide();
+             }); 
+   
+       });
+	</script>
+  </head>
+  <body>
+     <!--Начальный лист-->
+     <div class="nach">
+	    <div class="nach_1"> 
+		   <h6 class="wow bounceInDown">Николай Романьков</h6>
+		   <div class="line wow bounceInDown">
+		   </div>
+		   <p class="wow bounceInDown">Фотограф. Санкт-Петербург</p>
+		</div>
+		<a class="nach-down wow bounceInDown" id="as" href="#abo"><i class="icon-down"></i></a>
+	 </div>
+	 <!--Фото как смысл жизни-->
+	 <div class="fotos"  id="abo">
+	     <h1 class="wow bounceInLeft">Фотография как смысл жизни...</h1>
+	     <p class="wow bounceInLeft">&nbsp;&nbsp;«Фотография — это своего рода зримая литература. Снимая, ты делаешь нечто осмысленное: выстраиваешь кадр, что-то в него включаешь, что-то убираешь. Хороший фотограф — тот, кто лучше других строит кадр. И кто умеет положиться на случай, но тут мы уже вступаем во владения сюрреализма. Каждый раз, беря в руки фотоаппарат, я видел, как соединялись вместе два-три несовместимых элемента: скажем, тень от стоящего человека похожа на большого черного кота. И если кому-то удается такое запечатлеть, я называю это чудом. По сути, я занимаюсь литературой — фотографирую метафору: человека, тень которого — кот. Думаю, я пришел к фотографии по литературной дорожке»</p>
+		 <p class="wow bounceInLeft"><i>Хулио Кортасар (1914 — 1984)</i></p>
+	 </div>
+	 <!---->
+	 <!--Немного о себе-->
+	 <div class="about">
+	    <div class="container">
+		   <h1 class="wow slideInRight">Немного о себе</h1>
+		   <div class="row">
+		       <div class="col-md-8">
+			      <p class="wow slideInRight">Доброго времени суток, дорогой друг!<br>
+                  Меня зовут Николай Романьков. Я занимаюсь фотографией. Фотография-это возможность запечатлеть определённый момент, выразить себя, своё мироощущение. Я стремлюсь уловить такие моменты. 
+                  В первую очередь фотография должна иметь не только форму, но и содержание. В моём творчестве я стараюсь избегать формализма.
+                  С радостью помогу сохранить счастливые моменты вашей жизни в кадрах.</p>
+				  <a href="https://vk.me/prosto_kolian" class="but wow slideInRight">Записаться</a>
+			   </div>
+			   <div class="col-md-4">
+				  <div class="block"><img class="wow slideInRight" src="img/i.jpg" alt="Николай Романьков"></div>
+			   </div>
+		   </div>
+		</div>
+	 </div>
+	 <!---->
+	 <!--Портфолио-->
+	 <div class="portfolio">
+				<div class="container">
+					<h2 class="wow fadeIn" data-wow-duration="2s">Портфолио</h2>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="portfolio-block wow fadeIn">
+							  <a class="pb" href="port.html">
+							     <img src="img/portf/p.jpg" alt="Портреты"> 
+							     <a class="bn" href="#dialog" name="modal">Портреты</a>
+							  </a>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="portfolio-block wow fadeIn">
+							  <a class="pb" href="#dialog1" name="modal">
+							     <img src="img/portf/l.jpg" alt="Пейзажи"> 
+							     <a class="bn" href="#dialog1" name="modal">Пейзажы</a>
+							  </a>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="portfolio-block wow fadeIn">
+							  <a class="pb" href="#dialog2" name="modal">
+							     <img src="img/portf/in.jpg" alt="В фокусе"> 
+							     <a class="bn" href="#dialog2" name="modal">"В фокусе"</a>
+							  </a>
+							</div>
+						</div>
+					</div>
+				</div>
+	 </div>   
+	 <!---->
+	 <!--Подвал-->
+	 <div class="footer">
+	    <div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<strong>Николай Романьков</strong>
+							<p>Фотограф.<br>Санкт-Петербург</p>
+						</div>
+						<div class="col-md-6">
+							<strong>Подпишитесь</strong>
+							<div class="social-links">
+								<a href="https://vk.com/prosto_kolian"><i class="icon-vk"></i></a>
+								<a href="https://www.instagram.com/nicholas_in__focus/"><i class="icon-inst"></i></a>
+								<a href="https://www.youtube.com/channel/UCJ6nQ3UUvrn8oWdA8M2dtEQ"><i class="icon-you"></i></a>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<strong>Напишите мне</strong>
+							<a href="https://vk.me/prosto_kolian" class="offer-btn">Заказать сайт</a>
+						</div>
+					</div>
+				</div>
+	 </div>
+	 
+  </body>
+</html>
