@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /index.html
+Disallow: /port.html
+Disallow: /infocus.html
