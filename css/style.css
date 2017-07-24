@@ -86,16 +86,11 @@ a:active, a:visited, a:focus {
 	width: 100%;
 	padding: 5rem 0px;
 	text-align: center;
-	/* position: relative; */
 	margin: 0 auto;
 }
 .about h1 {
 	color: #fff;
 	text-align: center;
-	/* padding-top: 1rem; */
-	/* padding-bottom: 5rem; */
-	/* padding-left: 7rem; */
-	/* padding-right: 30rem; */
 	text-transform: uppercase;
 	font-weight: 800;
 	font-size: 3.6rem;
@@ -116,7 +111,6 @@ a:active, a:visited, a:focus {
 	display: block;
 	width: 80%;
 	max-width: 250px;
-	/* margin-left: 0.8rem; */
 	border: 1px solid #fff;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
@@ -300,9 +294,6 @@ a:active, a:visited, a:focus {
 	.nach_1  h6{
 		font-size: 3.6rem;
 	}
-	/* .block { */
-		/* margin-top: 2rem; */
-	/* } */
 	.about .but {
 		margin: 1.8rem auto;
 	    max-width: 200px;

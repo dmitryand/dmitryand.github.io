@@ -1,12 +1,6 @@
 ﻿body {
 	font-family: 'Open Sans', sans-serif;
-	background-color: #fff;
-	text-align: center;
 }
-html {
-	font-size: 10px;
-}
-
 * {
  box-sizing: border-box;
 }
@@ -79,7 +73,10 @@ input[type="checkbox"]:checked ~ .grid {
  align-content: flex-start;
  z-index: 0;
  height: 100%;
- padding: 16px;
+ padding-top: 50px;
+ padding-bottom: 16px;
+ padding-left: 16px;
+ padding-right: 16px;
  overflow: auto;
  background-color: #222;
  text-align: center;
@@ -182,3 +179,30 @@ input[type="checkbox"]:checked ~ .grid {
 /* */
 
 
+.cb a{
+	color: #fff;
+	font-size: 1.7rem;
+	z-index: 1;
+	position: fixed;
+	opacity: 1;
+	margin: 0.2rem 0px 0px 16px;
+	text-decoration: none;
+	border: 2px solid #fff;
+	border-radius: 25px;
+	display: block;
+	width: 80%;
+	max-width: 250px;
+	transition: 0.2s;
+	text-align: center;
+}
+.cb a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+
+@media (min-width: 0px) and (max-width: 990px) {
+	html {
+		font-size: 15px;
+	}
+}
