@@ -93,6 +93,7 @@ input[type="checkbox"]:checked ~ .grid {
  opacity: .75;
  -webkit-transition: opacity .5s;
  transition: opacity .5s;
+  margin: 0 auto;
 }
 .grid .grid-item:hover {
  opacity: 1;
@@ -100,15 +101,84 @@ input[type="checkbox"]:checked ~ .grid {
 @media screen and (max-width: 1024px) {
  .grid .grid-item {
  width: 50%;
+ margin: 0 auto;
  }
 }
 @media screen and (max-width: 480px) {
  .grid .grid-item {
  width: 100%;
+ margin: 0 auto;
  }
 }
 .grid img {
- width: 350px;
- height: 250px;
+ width: 100%;
+ height: 100%;
  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
+
+
+
+/* прелоадер */
+.preloader {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  perspective: 1600px;
+  perspective-origin: 20% 50%;
+  transition: 0.5s all;
+  opacity: 1;
+}
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #242424; /*подобрать цвета в куллере*/
+  border-top: 3px solid #FFF;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: spin 1s infinite linear;
+}
+.preloader.fade {
+  opacity: 0;
+}
+.b-ico-preloader {
+  background: url(http://weblaboratory.in.ua/wp-content/themes/graphy/images/new_logo.svg);
+  background-size: cover;
+  width: 52px;
+  height: 67px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: ico 5s infinite linear;
+  transform-style: preserve-3d;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ico {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+/* */
+
+
